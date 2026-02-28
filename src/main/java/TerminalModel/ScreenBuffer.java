@@ -11,6 +11,16 @@ public class ScreenBuffer {
         this.rows = rows;
         this.columns = columns;
         this.screen = new char[rows][columns];
+        init();
+    }
+
+    public void init(){
+        for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < columns; j++) {
+                    screen[i][j] = ' ';
+                }
+            
+        }
     }
 
     public char getCell(int row, int columns) {
